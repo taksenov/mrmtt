@@ -1,0 +1,30 @@
+/* Additional.Layouts */
+
+/* Variables */
+
+/* ========= */
+
+/* Selectors */
+.fullpage {
+  width: 100%;
+  // IDEA: https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
+}
+
+/* ========= */
+
+/* MediaQueries */
+
+/* ============ */

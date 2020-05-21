@@ -1,0 +1,123 @@
+// Form
+
+@import "../../../../../../assets/styles/mixins/global-mixins";
+
+// Variables
+// =========
+
+// Selectors
+
+.headerWrapper {
+  display: flex;
+}
+
+.headerLabel {
+  display: flex;
+  flex: 1 0 90%;
+}
+
+.headerCloseForm {
+  display: flex;
+  flex: 1 0 10%;
+  justify-content: flex-end;
+}
+
+.headerCloseButton {
+  height: 16px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.centerLabel {
+  display: flex;
+  align-items: center;
+}
+
+.redCross {
+  color: red;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.helpPseudoLink {
+  border-bottom: 1px dashed #0066ff;
+  color: #0066ff;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.inputWrapperSettings.inputWrapperSettings {
+  width: 250px !important;
+}
+
+.inputSettings {
+  @include global-input-border;
+}
+
+.strongLabel {
+  font-weight: 600;
+}
+
+.listBlock {
+  height: 726px;
+  overflow-y: scroll;
+}
+
+.userItemInList {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.smallMarginBottom {
+  margin-bottom: 8px !important;
+}
+// =========
+
+// MediaQueries
+@media screen and (min-width: 1201px) {
+}
+
+@media screen and (min-width: 994px) and (max-width: 1200px) {
+}
+
+@media screen and (min-width: 769px) and (max-width: 993px) {
+}
+
+@media screen and (max-width: 768px) {
+  .flexLabel {
+    flex: 1 0 30%;
+  }
+
+  .flexSelector {
+    display: flex !important;
+    flex: 1 0 40%;
+  }
+
+  .flexCross,
+  .flexCrossPlug {
+    flex: 1 1 10%;
+  }
+
+  /*
+    * IDEA: Workaround for Safari on iOS
+    * https://stackoverflow.com/questions/2989263/disable-auto-zoom-in-input-text-tag-safari-on-iphone
+    * https://thingsthemselves.com/no-input-zoom-in-safari-on-iphone-the-pixel-perfect-way/
+  */
+  .selectMiniSize {
+    padding-left: 6px !important;
+
+    div[role="alert"] {
+      height: 16px;
+      font-size: 16px;
+      overflow: hidden;
+    }
+  }
+}
+// ============

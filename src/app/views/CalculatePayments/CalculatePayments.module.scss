@@ -1,0 +1,50 @@
+// ExtruderTile
+
+// Variables
+// =========
+
+// Selectors
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.labelDirection {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.leftButton {
+  margin-right: 0 !important;
+}
+
+.timeLabel {
+  font-size: 22px;
+}
+
+.lowMargins {
+  margin-top: 6px !important;
+  margin-bottom: 8px !important;
+}
+
+.segmentHeight.segmentHeight {
+  max-height: calc(100% - (66px + 60px)) !important;
+}
+
+.segmentWidth.segmentWidth {
+  width: calc(100% - 260px);
+}
+
+.messageTextCentered {
+  text-align: center;
+}
+// =========
+
+// MediaQueries
+// ============

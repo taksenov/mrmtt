@@ -1,0 +1,41 @@
+/**
+ * Глобальные миксины SCSS.
+ * В большинстве своем переопределяют ранее установленные настройки. 
+ * 
+ * https://sass-scss.ru/documentation/miksini/obyavlenie_miksina/
+ * https://sass-scss.ru/documentation/miksini/ispolzovanie_miksina/
+ */
+
+// Глобальные переменные
+@import '../variables/variables';
+
+@mixin global-input-border {
+  border: 1px solid $global-color-input !important;
+
+  &:focus {
+    border: 1px solid $global-color-input-focus !important;
+  }
+}
+
+// Используется в тех местах, где JSX не обернул в лейаут контейнера `ContainerLayout`
+@mixin global-inputs-for-safari {
+  input[type='color'],
+  input[type='date'],
+  input[type='datetime'],
+  input[type='datetime-local'],
+  input[type='email'],
+  input[type='month'],
+  input[type='number'],
+  input[type='password'],
+  input[type='search'],
+  input[type='tel'],
+  input[type='text'],
+  input[type='time'],
+  input[type='url'],
+  input[type='week'],
+  textarea[type='text'],
+  select:focus {
+    font-size: 16px !important;
+    padding: 6px;
+  }
+}

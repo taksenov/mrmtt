@@ -1,0 +1,57 @@
+/**
+ * Глобальные миксины SCSS. Для смартфонов.
+ * В большинстве своем переопределяют ранее установленные настройки. 
+ * В основном используется в адаптивном виде для смартфонов.
+ * 
+ * https://sass-scss.ru/documentation/miksini/obyavlenie_miksina/
+ * https://sass-scss.ru/documentation/miksini/ispolzovanie_miksina/
+ */
+
+// Глобальные переменные
+@import '../variables/variables';
+
+@mixin mobile-subheader {
+  font-family: $global-font-family;
+  font-size: 1em;
+  font-weight: 600;
+  color: $global-color-black;
+  line-height: 1;
+  text-transform: none;
+}
+
+// Структура вложенности div>input
+@mixin mobile-label {
+  padding-top: 0 !important;
+  padding-bottom: 4px !important;
+
+  & label {
+    font-family: $global-font-family;
+    font-size: 14px;
+    font-weight: 400;
+    color: $global-color-black-alpha087;
+  }
+}
+
+@mixin mobile-input {
+  height: $global-input-height-mobile;
+}
+
+// Select из semantic-ui-react по сути селектором не является
+@mixin mobile-pseudo-selector {
+  padding-left: 6px !important;
+  height: $global-input-height-mobile !important;
+
+  div[role='alert'] {
+    height: 16px;
+    font-size: 16px;
+    overflow: hidden;
+  }
+}
+
+@mixin mobile-selector-height-workaround {
+  font-size: 13px !important;
+}
+
+@mixin mobile-button-group {
+  height: $global-input-height-mobile !important;
+}
